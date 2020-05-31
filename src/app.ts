@@ -8,7 +8,10 @@ const router = new Router(); // 新建一个koa-router
 const logger = KoaLogger()
 
 router.get('/', async (ctx) => { // 截获所有路由，都指向此函数
-    ctx.body = 'Hello 郭大爷' // 像浏览器返回数据
+    const list: number = 123
+    const b: string = list.toString()
+    console.log(b)
+    ctx.body = 'Hello koa' // 像浏览器返回数据
 })
 
 app.use(logger) // 日志输出
